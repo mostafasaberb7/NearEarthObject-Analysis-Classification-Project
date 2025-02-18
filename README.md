@@ -1,6 +1,3 @@
-# Create a README file with a professional structure for GitHub
-
-readme_content = """
 # **NearEarthObject-Analysis-Classification-Project**
 
 ## **Introduction**
