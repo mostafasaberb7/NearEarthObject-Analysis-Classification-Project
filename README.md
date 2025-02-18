@@ -57,8 +57,3 @@ A **Random Forest Classifier** was used to build a predictive model that determi
 This project successfully analyzed and modeled the Near-Earth Objects dataset to predict which objects could be hazardous. Through careful data cleaning, visualization, and modeling, we were able to gain valuable insights into the nature of NEOs and develop a robust classification model.
 """
 
-# Write the content to a README file
-with open('README.md', 'w') as file:
-    file.write(readme_content)
-
-print("README.md file created successfully!")
