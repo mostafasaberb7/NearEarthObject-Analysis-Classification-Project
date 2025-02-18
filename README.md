@@ -1,42 +1,67 @@
-# NearEarthObject-Analysis-Classification-Project
-Introduction
-This project involves analyzing the Nearest Earth Objects (1910-2024) dataset. The analysis focuses on understanding key features such as object size, velocity, miss distance, and the hazardous nature of these objects. The dataset is cleaned, visualized, and used to build a classification model to predict whether an object is hazardous or not.
+# Create a README file with a professional structure for GitHub
 
-Dataset Information
-The dataset contains information about near-Earth objects (NEOs) from 1910 to 2024. The columns in the dataset include:
+readme_content = """
+# **NearEarthObject-Analysis-Classification-Project**
 
-neo_id: Unique identifier for the near-Earth object.
-name: Name of the near-Earth object.
-absolute_magnitude: The absolute magnitude of the NEO.
-estimated_diameter_min: Estimated minimum diameter of the NEO (in kilometers).
-estimated_diameter_max: Estimated maximum diameter of the NEO (in kilometers).
-orbiting_body: Primary celestial body that the object is orbiting.
-relative_velocity: The velocity of the NEO relative to Earth (in km/h).
-miss_distance: The distance at which the object will miss Earth (in kilometers).
-is_hazardous: Indicator if the NEO is classified as hazardous.
-Data Cleaning and Preprocessing
-The dataset underwent several cleaning steps:
+## **Introduction**
 
-Handling missing values: Columns such as absolute_magnitude, estimated_diameter_min, and estimated_diameter_max had missing values which were filled with their respective means.
-Outlier treatment: Outliers were replaced with mean values to minimize their impact on model training.
-Feature engineering: New columns for year and object code were extracted from the name column for further analysis.
-Label encoding: Categorical columns such as orbiting_body and is_hazardous were encoded using LabelEncoder.
-Data Analysis and Visualizations
-Several analysis questions were explored, such as:
+This project focuses on the analysis of near-Earth objects (NEOs) using the dataset spanning from 1910 to 2024. The aim is to explore key features such as object size, velocity, miss distance, and hazard classification to predict whether a near-Earth object is potentially hazardous. This project involves data cleaning, feature engineering, visualization, and building a classification model to make these predictions.
 
-Distribution and statistics for absolute_magnitude, estimated_diameter_min, estimated_diameter_max, and relative_velocity.
-Trends of hazardous objects by year and orbiting body.
-Relationship between object size and hazard classification.
-Visualizations such as histograms, box plots, and pie charts were used to analyze the data distribution and trends.
+## **Dataset Information**
 
-Modeling and Evaluation
-A Random Forest Classifier was used to predict whether an NEO is hazardous or not.
+The dataset contains detailed information about near-Earth objects (NEOs), including their characteristics and orbit information. Below are the key columns in the dataset:
 
-Steps:
-The dataset was split into training and testing sets (80% training, 20% testing).
-The model was trained on the training set.
-The model's accuracy was evaluated on both the training and test sets.
-Model Performance:
-Training Accuracy: Achieved high accuracy on the training set.
-Test Accuracy: The model performed well on unseen data.
-Classification Report: Precision, recall, and F1-score were computed to assess the model's performance on the test set.
+- **`neo_id`**: Unique identifier for each near-Earth object.
+- **`name`**: Name of the near-Earth object.
+- **`absolute_magnitude`**: The absolute magnitude of the NEO, indicating its brightness.
+- **`estimated_diameter_min`**: Minimum estimated diameter of the NEO (in kilometers).
+- **`estimated_diameter_max`**: Maximum estimated diameter of the NEO (in kilometers).
+- **`orbiting_body`**: The primary celestial body that the object is orbiting.
+- **`relative_velocity`**: Velocity of the NEO relative to Earth (in kilometers per hour).
+- **`miss_distance`**: The distance at which the object will miss Earth (in kilometers).
+- **`is_hazardous`**: Indicates whether the NEO is classified as hazardous.
+
+## **Data Cleaning and Preprocessing**
+
+The dataset underwent multiple cleaning and preprocessing steps to prepare it for analysis and modeling:
+
+- **Handling Missing Values**: Missing values in columns such as `absolute_magnitude`, `estimated_diameter_min`, and `estimated_diameter_max` were imputed with the mean values of their respective columns.
+- **Outlier Treatment**: Outliers were detected and replaced with mean values to reduce their impact on model performance.
+- **Feature Engineering**: New columns for the year and object code were extracted from the `name` column to provide additional insights for analysis.
+- **Label Encoding**: Categorical variables such as `orbiting_body` and `is_hazardous` were label-encoded using `LabelEncoder` for model training.
+
+## **Data Analysis and Visualizations**
+
+Several analytical questions were explored to better understand the dataset and identify trends:
+
+- **Distribution Analysis**: Examined the distribution and statistics for key features like `absolute_magnitude`, `estimated_diameter_min`, `estimated_diameter_max`, and `relative_velocity`.
+- **Hazard Trends**: Analyzed the trend of hazardous objects over the years and across different orbiting bodies.
+- **Size and Hazard Relationships**: Investigated the relationship between the size of an object and its hazard classification.
+
+Visualizations such as histograms, box plots, and pie charts were created to provide insights into data distribution, outliers, and trends.
+
+## **Modeling and Evaluation**
+
+A **Random Forest Classifier** was used to build a predictive model that determines whether a near-Earth object is hazardous. Below are the steps taken:
+
+1. **Train-Test Split**: The dataset was split into training (80%) and testing (20%) sets.
+2. **Model Training**: The Random Forest model was trained on the training data.
+3. **Model Evaluation**: The model's accuracy was assessed on both the training and testing sets to ensure robust performance.
+4. **Performance Metrics**: Key metrics such as precision, recall, F1-score, and accuracy were calculated using a classification report.
+
+### **Model Performance**
+
+- **Training Accuracy**: The model achieved a high accuracy on the training set, indicating it was able to capture the patterns in the data effectively.
+- **Test Accuracy**: The model also performed well on unseen data, showcasing good generalization ability.
+- **Classification Report**: Precision, recall, and F1-score were computed to evaluate the model’s performance on the test set.
+
+## **Conclusion**
+
+This project successfully analyzed and modeled the Near-Earth Objects dataset to predict which objects could be hazardous. Through careful data cleaning, visualization, and modeling, we were able to gain valuable insights into the nature of NEOs and develop a robust classification model.
+"""
+
+# Write the content to a README file
+with open('README.md', 'w') as file:
+    file.write(readme_content)
+
+print("README.md file created successfully!")
